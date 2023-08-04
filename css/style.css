@@ -928,7 +928,7 @@ ul,li{
 
 /* fudar part start */
 .fudar{
-    padding: 100px 0;
+    padding: 100px 0 0;
     background-color: var(--bg-black-50);
     color: var(--text-black-700);
 }
@@ -952,6 +952,15 @@ ul,li{
     color: var(--text-black-700);
     font-weight: 600;
     padding-top: 20px;
+}
+.fudar__end{
+    margin-top: 25px;
+    text-align: center;
+    border-top: 1px solid var(--text-black-700);
+    font-weight: 600;
+}
+.fudar__end .fudar__des{
+    padding: 10px;
 }
 
 /* fudar part end */
