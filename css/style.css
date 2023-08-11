@@ -139,7 +139,7 @@ ul,li{
     text-transform: capitalize;
 }
 .logo__link{
-    color: var(--text-black-900);
+    color: var(--skin-color);
     font-weight: 700;
     padding: 15px 20px;
     font-size: 30px;
@@ -703,21 +703,27 @@ ul,li{
 }
 .portfolio__mixitup__buttons{
     padding-bottom: 20px;
+    column-gap: 15px;
 }
 .portfolio__mixitup__button{
     font-size: 16px;
     font-weight: 500;
-    padding: 12px 25px;
-    color: var(--text-white-100);
-    border-radius: 15px;
-    display: inline-block;
-    white-space: nowrap;
+    color: var(--text-black-700);
     border: none;
-    background-color: var(--skin-color);
+    border-bottom: 1px solid var(--text-black-700);
+    background-color: var(--bg-black-900);
+    margin: 5px 10px ;
+    padding-bottom: 10px;
     transition: all linear 0.3s;
+
 }
 .portfolio__mixitup__button:hover{
     transform: scale(1.05);
+}
+.portfolio__mixitup__button.active {
+    color: var(--skin-color);
+    transform: scale(1.25);
+    border-color: var(--skin-color);
 }
 .portfolio__item{
     flex: 0 0 33.33%;
@@ -1215,6 +1221,15 @@ ul,li{
     }
     .subscribe__input{
         max-width: 100%;
+    }
+    .fudar__wrapper{
+        display: block;
+        text-align: center;
+    }
+    .fudar__items{
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
     }
 }
 /* medium device */

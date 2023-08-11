@@ -5,6 +5,11 @@ $(function(){
         $(this).addClass('active').siblings().removeClass('active')
     });
 });
+$(function(){
+    $('.portfolio__mixitup__button').on('click',function(){
+        $(this).addClass('active').siblings().removeClass('active')
+    });
+});
 // tayping animation==================
 
 
@@ -87,11 +92,6 @@ $(function(){
 
 
 
-var mixer = mixitup(containerEl, {
-    selectors: {
-        target: '.portfolio__wrapper'
-    },
-    animation: {
-        duration: 300
-    }
+$(function(){
+    var mixer = mixitup('.portfolio__item__wrapper');
 });
