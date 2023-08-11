@@ -1103,6 +1103,15 @@ ul,li{
         display: block;
         padding-top: 5px;
     }
+    .fudar__wrapper{
+        display: block;
+        text-align: center;
+    }
+    .fudar__items{
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
 }
 /* small device */
 @media(min-width:576px) and (max-width:767.98px){
