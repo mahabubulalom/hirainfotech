@@ -839,12 +839,26 @@ ul,li{
 }
 .form__control:focus{
     box-shadow: 0 0 40px rgba(48, 46, 77, 0.15);
+    border: 1px solid var(--skin-color);
 }
 .contact__form__messages{
     height: 150px;
 }
 .contact__button{
     padding: 15px 50px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 35px;
+    color: var(--text-white-100);
+    border-radius: 15px;
+    display: inline-block;
+    white-space: nowrap;
+    border: none;
+    background-color: var(--skin-color);
+    transition: all linear 0.3s;
+}
+.contact__button:hover{
+    transform: scale(1.05);
 }
 .contact__form__buttom{
     border: 0;

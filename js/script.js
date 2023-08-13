@@ -95,3 +95,47 @@ $(function(){
 $(function(){
     var mixer = mixitup('.portfolio__item__wrapper');
 });
+
+
+// contact from js ====================
+let name__fild = document.querySelector(".name__fild")
+let email = document.querySelector(".email")
+let subject = document.querySelector(".subject")
+let contact__form__messages = document.querySelector(".messages")
+
+let name__err = document.querySelector(".name__err")
+let email__err = document.querySelector(".email__err")
+let subject__err = document.querySelector(".subject__err")
+let Messages__err = document.querySelector(".Messages__err")
+let valid_email = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+
+let contact__button = document.querySelector(".submit")
+
+
+submit.addEventListener("click",function(){
+    if(name__fild.value == ""){
+        name__err.innerHTML = "name dite hobe"
+        name__fild.style.border = "1px solid red"
+    }else{
+        name__err.innerHTML = ""
+        name__fild.style.border = ""
+    }
+    if(email.value == ""){
+        email_err.innerHTML = "email dite hobe"
+    }else{
+        if(email.value.match(valid_email)){
+            email_err.innerHTML = ""
+        }else{
+            email_err.innerHTML = "taype your mein email"
+        }
+    }
+    if(!password.value){
+        password_err.innerHTML ="type your password"
+    }else{
+        if(!password.value.length <= 8){
+            password_err.innerHTML = "complit your password"
+        }else{
+            password_err.innerHTML = ""
+        }
+    }
+})
