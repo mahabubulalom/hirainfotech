@@ -101,7 +101,7 @@ $(function(){
 let name__fild = document.querySelector(".name__fild")
 let email = document.querySelector(".email")
 let subject = document.querySelector(".subject")
-let contact__form__messages = document.querySelector(".messages")
+let contact__form__messages = document.querySelector(".contact__form__messages")
 
 let name__err = document.querySelector(".name__err")
 let email__err = document.querySelector(".email__err")
@@ -109,33 +109,39 @@ let subject__err = document.querySelector(".subject__err")
 let Messages__err = document.querySelector(".Messages__err")
 let valid_email = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 
-let contact__button = document.querySelector(".submit")
+let contact__button = document.querySelector(".contact__button")
 
 
-submit.addEventListener("click",function(){
+contact__button.addEventListener("click",function(){
     if(name__fild.value == ""){
-        name__err.innerHTML = "name dite hobe"
+        name__err.innerHTML = "taype your name"
         name__fild.style.border = "1px solid red"
     }else{
-        name__err.innerHTML = ""
+		name__err.innerHTML = ""
         name__fild.style.border = ""
     }
     if(email.value == ""){
-        email_err.innerHTML = "email dite hobe"
+		email__err.innerHTML = "taype your email"
+		email.style.border = "1px solid red"
     }else{
         if(email.value.match(valid_email)){
-            email_err.innerHTML = ""
+            email__err.innerHTML = ""
         }else{
-            email_err.innerHTML = "taype your mein email"
+            email__err.innerHTML = "taype your valid email"
         }
     }
-    if(!password.value){
-        password_err.innerHTML ="type your password"
+	if(subject.value == ""){
+        subject__err.innerHTML = "enter your subject"
+        subject.style.border = "1px solid red"
     }else{
-        if(!password.value.length <= 8){
-            password_err.innerHTML = "complit your password"
-        }else{
-            password_err.innerHTML = ""
-        }
+		subject__err.innerHTML = ""
+        subject.style.border = ""
     }
-})
+	if(contact__form__messages.value == ""){
+        Messages__err.innerHTML = "describe your requirements"
+        contact__form__messages.style.border = "1px solid red"
+    }else{
+		Messages__err.innerHTML = ""
+        contact__form__messages.style.border = ""
+    }
+});

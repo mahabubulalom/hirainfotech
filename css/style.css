@@ -841,6 +841,9 @@ ul,li{
     box-shadow: 0 0 40px rgba(48, 46, 77, 0.15);
     border: 1px solid var(--skin-color);
 }
+.err{
+    color: red;
+}
 .contact__form__messages{
     height: 150px;
 }
