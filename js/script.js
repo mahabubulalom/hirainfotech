@@ -124,10 +124,11 @@ contact__button.addEventListener("click",function(){
 		email__err.innerHTML = "taype your email"
 		email.style.border = "1px solid red"
     }else{
-        if(email.value.match(valid_email)){
-            email__err.innerHTML = ""
+		if(email.value.match(valid_email)){
+			email__err.innerHTML = ""
+			email.style.border = ""
         }else{
-            email__err.innerHTML = "taype your valid email"
+			email__err.innerHTML = "taype your valid email"
         }
     }
 	if(subject.value == ""){
